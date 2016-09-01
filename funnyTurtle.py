@@ -1,7 +1,7 @@
 import turtle
 import math
-from threading import Thread
-from time import sleep
+# from threading import Thread
+# from time import sleep
 
 #draw four obliqueSquares firstly
 turtle.setup(800,600)
@@ -10,8 +10,9 @@ turtle.bgcolor('#1E0028')
 # turtle.bgcolor((30,0,40))
 
 # screen.setup(width=.75, height=0.5, startx=None, starty=None)
-dis=90
+dis=60
 def obliqueSquare(t,x,y):
+	t.width(0.5)
 	t.up()
 	t.goto(x,y)
 	t.down()
@@ -38,22 +39,29 @@ turtle.update()
 
 ##############################################
 
-#define for points, draw a line through these points with no delay
+#define four points, draw a line through these points with no delay
 #a,b,c,d are the names of the points
 steps=dis*2
 stepsize=1/2
 
 def fourPointGooto(t,a,b,c,d):
+	t.shape("circle")
+	t.width(0.3)
+	t.shapesize(0.2, 0.2)
 	t.up()
 	t.goto(a)
 	t.down()
-	t.left(45)
+	# t.left(45)
+	t.stamp()
 	t.goto(b)
-	t.right(90)
+	t.stamp()
+	# t.right(90)
 	t.goto(c)
-	t.right(90)
+	t.stamp()
+	# t.right(90)
 	t.goto(d)
-	t.right(90)
+	t.stamp()
+	# t.right(90)
 	t.goto(a)
 
 def drawSquare1(t):
@@ -127,6 +135,7 @@ def drawSquare1(t):
 			d3=[d3[0]-change1[0],d3[1]-change1[1]]
 			
 			turtle.update()
+			t.clearstamps()
 
 
 		for j in range(steps):
@@ -157,6 +166,7 @@ def drawSquare1(t):
 			d3=[d3[0]-change1[0],d3[1]+change1[1]]
 
 			turtle.update()
+			t.clearstamps()
 
 		for k in range(steps):
 			t.clear()
@@ -186,6 +196,7 @@ def drawSquare1(t):
 			d3=[d3[0]+change1[0],d3[1]+change1[1]]
 
 			turtle.update()
+			t.clearstamps()
 
 		for l in range(steps):
 			t.clear()
@@ -215,6 +226,7 @@ def drawSquare1(t):
 			d3=[d3[0]+change1[0],d3[1]-change1[1]]
 
 			turtle.update()
+			t.clearstamps()
 	
 
 
