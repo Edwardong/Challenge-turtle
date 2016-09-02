@@ -1,15 +1,10 @@
 import turtle
 import math
-# from threading import Thread
-# from time import sleep
 
 #draw four obliqueSquares firstly
 turtle.setup(800,600)
 turtle.bgcolor('#1E0028')
-# screen.colormode(255)
-# turtle.bgcolor((30,0,40))
 
-# screen.setup(width=.75, height=0.5, startx=None, starty=None)
 dis=60
 def obliqueSquare(t,x,y):
 	t.width(0.5)
@@ -51,17 +46,13 @@ def fourPointGooto(t,a,b,c,d):
 	t.up()
 	t.goto(a)
 	t.down()
-	# t.left(45)
 	t.stamp()
 	t.goto(b)
 	t.stamp()
-	# t.right(90)
 	t.goto(c)
 	t.stamp()
-	# t.right(90)
 	t.goto(d)
 	t.stamp()
-	# t.right(90)
 	t.goto(a)
 
 def drawSquare1(t):
@@ -227,18 +218,8 @@ def drawSquare1(t):
 
 			turtle.update()
 			t.clearstamps()
-	
-
 
 Amy=turtle.Turtle()
-# Douglas=turtle.Turtle()
 Amy.color('white')
 drawSquare1(Amy)
-# drawSquare2(Douglas)
-#while True:
-# t1 = Thread(target = drawSquare1, args = (Amy,))
-# t1.start()
-# #t1.sleep(0.05)
-# t2 = Thread(target = drawSquare2, args = (Douglas,))
-# t2.start()
-	#t2.sleep(0.05)
+
